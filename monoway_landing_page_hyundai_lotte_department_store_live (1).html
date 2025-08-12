@@ -257,7 +257,7 @@
     });
 
     // ===== Google Apps Script Web App URL로 교체 =====
-    const SHEET_ENDPOINT = 'YOUR_APPS_SCRIPT_WEB_APP_URL';
+    const SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfycbyqsKgS1_SJyr9u5aJoWc9SufzCHrU_i6dzFtOgGhgcv2uUNxhrra52jXKqEv5A8t7AqA/exec';
 
     async function submitToSheet(formEl, successEl, errorEl) {
       if (formEl.querySelector('[name="trap"]').value) return; // 스팸 방지
