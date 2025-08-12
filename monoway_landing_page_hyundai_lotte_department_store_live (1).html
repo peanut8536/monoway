@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MONOWAY — 현대·롯데 백화점 현장 라이브커머스 대행</title>
+  <meta name="description" content="현대·롯데 백화점 매장에서 실제 진행되는 라이브커머스. 백화점 정품 브랜드와 고품질 방송 환경으로 매출과 신뢰를 동시에 높이세요." />
+  <meta property="og:title" content="MONOWAY — 현대·롯데 백화점 현장 라이브" />
+  <meta property="og:description" content="단순 상품 공급이 아닌, 실제 백화점 현장 라이브 진행. 셀러 파트너 모집 중." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/og-image.jpg" />
+  <link rel="icon" href="/favicon.ico" />
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .hero-overlay { background: linear-gradient(180deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.35) 40%, rgba(0,0,0,.15) 100%); }
+    .glass { background: rgba(255,255,255,.08); backdrop-filter: blur(8px); }
+    .hidden-field { position: absolute !important; left: -9999px !important; opacity: 0 !important; }
+    .section { padding-top: 4rem; padding-bottom: 4rem; }
+    .container { max-width: 1200px; margin: 0 auto; padding-left: 1rem; padding-right: 1rem; }
+    .h2 { font-weight: 800; letter-spacing: -0.02em; }
+    .lead { color: rgba(255,255,255,.75); }
+    /* 균형 줄바꿈 (지원 브라우저에서만 적용) */
+    .balance { text-wrap: balance; }
+    @media (prefers-reduced-motion: reduce) {
+      * { scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body class="antialiased bg-neutral-950 text-white">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-neutral-950/70 backdrop-blur border-b border-white/10">
+    <div class="container py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-xl bg-white text-neutral-900 font-black grid place-items-center">M</div>
+        <span class="font-semibold tracking-tight">MONOWAY</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-6 text-sm text-white/80">
+        <a href="#why" class="hover:text-white">왜 MONOWAY인가</a>
+        <a href="#brands" class="hover:text-white">진행 브랜드</a>
+        <a href="#process" class="hover:text-white">프로세스</a>
+        <a href="#benefits" class="hover:text-white">셀러 혜택</a>
+        <a href="#apply" class="hover:text-white">문의/지원</a>
+      </nav>
+
+      <!-- CTA (Desktop) -->
+      <a href="#apply" class="hidden md:inline-flex items-center gap-2 rounded-2xl bg-white text-neutral-900 px-4 py-2 text-sm font-semibold shadow hover:shadow-lg transition">지금 상담하기</a>
+
+      <!-- Mobile menu button -->
+      <button id="menuBtn" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-xl border border-white/15 text-white/90" aria-label="모바일 메뉴 열기">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+
+    <!-- Mobile Nav -->
+    <nav id="mobileNav" class="md:hidden hidden border-t border-white/10 bg-neutral-950/95">
+      <div class="container py-3 grid gap-3 text-white/90">
+        <a class="py-2" href="#why">왜 MONOWAY인가</a>
+        <a class="py-2" href="#brands">진행 브랜드</a>
+        <a class="py-2" href="#process">프로세스</a>
+        <a class="py-2" href="#benefits">셀러 혜택</a>
+        <a class="py-2" href="#apply">문의/지원</a>
+        <a class="py-2 rounded-xl text-center bg-white text-neutral-900 font-semibold" href="#apply">지금 상담하기</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative">
+    <img loading="lazy" src="https://images.unsplash.com/photo-1543352634-8730cde58b87?q=80&w=1600&auto=format&fit=crop" alt="백화점 매장 라이브 방송 현장" class="w-full h-[62vh] sm:h-[68vh] object-cover select-none" />
+    <div class="hero-overlay absolute inset-0"></div>
+    <div class="absolute inset-0 flex items-center">
+      <div class="container">
+        <div class="max-w-3xl">
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="glass px-3 py-1 rounded-full text-xs border border-white/15">현대백화점 현장 라이브</span>
+            <span class="glass px-3 py-1 rounded-full text-xs border border-white/15">롯데백화점 현장 라이브</span>
+            <span class="glass px-3 py-1 rounded-full text-xs border border-white/15">정품 브랜드</span>
+          </div>
+          <!-- 줄바꿈 개선된 타이틀 (br 제거 + balance) -->
+          <h1 class="balance text-[1.75rem] leading-tight sm:text-5xl sm:leading-[1.15] font-extrabold">
+            현대·롯데 백화점 매장에서 진행하는 진짜 라이브커머스
+          </h1>
+          <p class="mt-3 sm:mt-4 text-base sm:text-lg lead">
+            단순 상품 공급이 아니라, 백화점 브랜드 매장과 스튜디오에서 실제로 진행되는 고품질 라이브로 시청자 신뢰와 구매 전환율을 높입니다.
+          </p>
+          <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row sm:items-center gap-3">
+            <a href="#apply" class="w-full sm:w-auto rounded-2xl bg-white text-neutral-900 px-5 py-3 text-center font-semibold shadow hover:shadow-lg transition">셀러 지원하기</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why MONOWAY -->
+  <section id="why" class="section">
+    <div class="container grid md:grid-cols-2 gap-10 items-start">
+      <div>
+        <h2 class="h2 text-2xl sm:text-3xl">왜 MONOWAY인가</h2>
+        <p class="mt-3 lead">MONOWAY는 현대·롯데 백화점과 협력해 입점 브랜드 매장에서 직접 라이브를 진행합니다. 검증된 공간과 정품 신뢰, 그리고 방송 품질로 매출과 브랜드 가치를 함께 끌어올립니다.</p>
+        <ul class="mt-6 space-y-3 text-white/90 text-sm sm:text-base">
+          <li class="flex gap-3"><span class="mt-1 w-2.5 h-2.5 rounded-full bg-white"></span><div><strong>현장 진행:</strong> 백화점 매장/폐점 후 매장/전용 스튜디오</div></li>
+          <li class="flex gap-3"><span class="mt-1 w-2.5 h-2.5 rounded-full bg-white"></span><div><strong>정품 100%:</strong> 나이키·노스페이스·마리떼·MLB·마땡킴 등 인기 브랜드</div></li>
+          <li class="flex gap-3"><span class="mt-1 w-2.5 h-2.5 rounded-full bg-white"></span><div><strong>멀티 플랫폼:</strong> 틱톡·유튜브·인스타라이브·페이스북 동시 송출</div></li>
+          <li class="flex gap-3"><span class="mt-1 w-2.5 h-2.5 rounded-full bg-white"></span><div><strong>빠른 정산:</strong> 발주 마감 후 평일 기준 4~5일 내 정산</div></li>
+        </ul>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="rounded-2xl overflow-hidden border border-white/10"><img loading="lazy" src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?q=80&w=1200&auto=format&fit=crop" alt="스튜디오 장비" class="w-full h-56 object-cover" /></div>
+        <div class="rounded-2xl overflow-hidden border border-white/10"><img loading="lazy" src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1200&auto=format&fit=crop" alt="백화점 디스플레이" class="w-full h-56 object-cover" /></div>
+        <div class="rounded-2xl overflow-hidden border border-white/10"><img loading="lazy" src="https://images.unsplash.com/photo-1577412647305-991150c7d163?q=80&w=1200&auto=format&fit=crop" alt="현장 라이브" class="w-full h-56 object-cover" /></div>
+        <div class="rounded-2xl overflow-hidden border border-white/10"><img loading="lazy" src="https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=1200&auto=format&fit=crop" alt="브랜드 매장" class="w-full h-56 object-cover" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brands (진행 브랜드) -->
+  <section id="brands" class="section bg-neutral-900/40 border-y border-white/10">
+    <div class="container">
+      <div class="flex items-end justify-between gap-4 mb-6">
+        <div>
+          <h3 class="h2 text-xl sm:text-2xl">진행 브랜드 (일부)</h3>
+          <p class="lead mt-1">스포츠·아웃도어/패션/잡화 중심의 백화점 입점 인기 브랜드를 현장 라이브로 진행합니다.</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
+        <div class="rounded-xl border border-white/10 p-4 text-center text-white/80">NIKE</div>
+        <div class="rounded-xl border border-white/10 p-4 text-center text-white/80">adidas</div>
+        <div class="rounded-xl border border-white/10 p-4 text-center text-white/80">THE NORTH FACE</div>
+        <div class="rounded-xl border border-white/10 p-4 text-center text-white/80">ARC'TERYX</div>
+        <div class="rounded-xl border border-white/10 p-4 text-center text-white/80">DISCOVERY</div>
+        <div class="rounded-xl border border-white/10 p-4 text-center text-white/80">MARITHÉ</div>
+        <div class="rounded-xl border border-white/10 p-4 text-center text-white/80">MLB</div>
+        <div class="rounded-xl border border-white/10 p-4 text-center text-white/80">MARDI</div>
+        <div class="rounded-xl border border-white/10 p-4 text-center text-white/80">NEW ERA</div>
+        <div class="rounded-xl border border-white/10 p-4 text-center text-white/80">CONVERSE</div>
+      </div>
+      <p class="text-xs text-white/50 mt-4">※ 가품 판매 이력 셀러는 참여가 제한됩니다. 모든 상품은 백화점 정품입니다. 실제 진행 브랜드는 지점/재고/일정에 따라 변동될 수 있습니다.</p>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section id="process" class="section">
+    <div class="container">
+      <h3 class="h2 text-2xl">프로세스</h3>
+      <div class="mt-8 grid md:grid-cols-5 gap-4">
+        <div class="rounded-2xl border border-white/10 p-5">
+          <div class="text-4xl font-black">01</div>
+          <h4 class="mt-3 font-semibold">백화점·브랜드 매장 선정</h4>
+          <p class="mt-2 text-white/70 text-sm">현대/롯데 백화점 내 매장 또는 전용 스튜디오 확정</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 p-5">
+          <div class="text-4xl font-black">02</div>
+          <h4 class="mt-3 font-semibold">상품·수수료 협의</h4>
+          <p class="mt-2 text-white/70 text-sm">공급률·할인율 기반 조건 설정</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 p-5">
+          <div class="text-4xl font-black">03</div>
+          <h4 class="mt-3 font-semibold">방송 일정 조율</h4>
+          <p class="mt-2 text-white/70 text-sm">최소 3~4일 전 일정 확정, 주당 횟수 조정</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 p-5">
+          <div class="text-4xl font-black">04</div>
+          <h4 class="mt-3 font-semibold">현장 라이브 & 발주</h4>
+          <p class="mt-2 text-white/70 text-sm">멀티 플랫폼 동시 송출, 방송 종료 후 발주 마감</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 p-5">
+          <div class="text-4xl font-black">05</div>
+          <h4 class="mt-3 font-semibold">정산 & CS</h4>
+          <p class="mt-2 text-white/70 text-sm">평일 기준 4~5일 내 정산, 불량 교환(3~5일) 지원</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seller Benefits -->
+  <section id="benefits" class="section bg-neutral-900/40 border-y border-white/10">
+    <div class="container">
+      <h3 class="h2 text-2xl">셀러 혜택</h3>
+      <div class="mt-8 grid md:grid-cols-3 gap-5">
+        <div class="rounded-2xl border border-white/10 p-6">
+          <h4 class="font-semibold">백화점 현장 진행</h4>
+          <p class="text-white/70 mt-2 text-sm">현대·롯데 백화점 매장에서 신뢰도 높은 방송 진행</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 p-6">
+          <h4 class="font-semibold">정품 브랜드</h4>
+          <p class="text-white/70 mt-2 text-sm">나이키·노스페이스·마리떼·MLB 등 인기 브랜드</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 p-6">
+          <h4 class="font-semibold">빠른 정산</h4>
+          <p class="text-white/70 mt-2 text-sm">발주 마감 후 4~5일 내 정산으로 안정적인 운영</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Applications -->
+  <section id="apply" class="section">
+    <div class="container">
+      <div class="rounded-2xl border border-white/10 p-6">
+        <h3 class="h2 text-xl">셀러 지원</h3>
+        <p class="lead text-sm mt-1">이름, 플랫폼, 채널 링크, 연락처, 방송 경험을 남겨주세요. 제출 시 구글 시트에 자동 저장됩니다.</p>
+        <form id="seller-form" class="mt-5 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <input name="type" value="seller" type="hidden" />
+          <input name="timestamp" type="hidden" />
+          <input name="trap" class="hidden-field" autocomplete="off" />
+
+          <input name="name" required class="md:col-span-1 rounded-xl bg-neutral-900 border border-white/10 px-4 py-3" placeholder="이름" />
+          <input name="platform" required class="md:col-span-1 rounded-xl bg-neutral-900 border border-white/10 px-4 py-3" placeholder="플랫폼 (틱톡/유튜브/인스타 등)" />
+          <input name="channel" required class="md:col-span-2 rounded-xl bg-neutral-900 border border-white/10 px-4 py-3" placeholder="채널 링크" />
+          <input name="phone" required type="tel" class="md:col-span-1 rounded-xl bg-neutral-900 border border-white/10 px-4 py-3" placeholder="연락처" />
+          <textarea name="experience" class="md:col-span-2 rounded-xl bg-neutral-900 border border-white/10 px-4 py-3" rows="4" placeholder="방송 경험 / 대표 카테고리"></textarea>
+          <div class="md:col-span-2">
+            <button class="w-full md:w-auto rounded-2xl bg-white text-neutral-900 px-5 py-3 font-semibold shadow hover:shadow-lg transition">지원서 제출</button>
+          </div>
+        </form>
+        <p id="seller-success" class="hidden mt-3 text-emerald-400 text-sm">제출이 완료되었습니다. 빠르게 연락드릴게요!</p>
+        <p id="seller-error" class="hidden mt-3 text-red-400 text-sm">제출에 실패했습니다. 잠시 후 다시 시도해 주세요.</p>
+
+        <!-- 유선문의 안내 -->
+        <div class="mt-6 p-4 rounded-xl bg-neutral-900 border border-white/10 text-sm text-white/80">
+          유선문의 : <strong>강민정 실장</strong> <a href="tel:01027747872" class="underline hover:text-white">010-2774-7872</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10">
+    <div class="container py-10 text-sm text-white/60">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <p>© <span id="y"></span> MONOWAY. All rights reserved.</p>
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4">
+          <div class="flex gap-4">
+            <a class="hover:text-white" href="#why">회사 소개</a>
+            <a class="hover:text-white" href="#brands">진행 브랜드</a>
+            <a class="hover:text-white" href="#apply">문의/지원</a>
+          </div>
+          <span class="hidden sm:inline">·</span>
+          <span>유선문의 : <strong>강민정 실장</strong> <a href="tel:01027747872" class="underline hover:text-white">010-2774-7872</a></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // 연도 표기
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // 모바일 메뉴 토글
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    menuBtn?.addEventListener('click', () => {
+      mobileNav.classList.toggle('hidden');
+    });
+
+    // ===== Google Apps Script Web App URL로 교체 =====
+    const SHEET_ENDPOINT = 'YOUR_APPS_SCRIPT_WEB_APP_URL';
+
+    async function submitToSheet(formEl, successEl, errorEl) {
+      if (formEl.querySelector('[name="trap"]').value) return; // 스팸 방지
+      formEl.querySelector('[name="timestamp"]').value = new Date().toISOString();
+
+      const data = Object.fromEntries(new FormData(formEl).entries());
+
+      try {
+        await fetch(SHEET_ENDPOINT, {
+          method: 'POST',
+          mode: 'no-cors', // 응답 판독 불가 → 성공 가정
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        formEl.reset();
+        successEl.classList.remove('hidden');
+        errorEl.classList.add('hidden');
+      } catch (e) {
+        successEl.classList.add('hidden');
+        errorEl.classList.remove('hidden');
+        console.error(e);
+      }
+    }
+
+    document.getElementById('seller-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      submitToSheet(
+        e.currentTarget,
+        document.getElementById('seller-success'),
+        document.getElementById('seller-error')
+      );
+    });
+  </script>
+</body>
+</html>
